@@ -1,6 +1,4 @@
-import { tw } from 'twind';
 import { useState } from 'react';
-import Button from '@/components/button';
 
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -12,37 +10,24 @@ type Link = {
   href: string;
 };
 
-const links = [
-  {
-    label: `Features`,
-    href: `/`,
-  },
-  {
-    label: `Testimonials`,
-    href: `/`,
-  },
-  {
-    label: `Pricing`,
-    href: `/`,
-  },
-  {
-    label: `Blog`,
-    href: `/`,
-  },
-];
+const links: Link[] = [];
 
-const secondaryLinks = [
+const secondaryLinks: Link[] = [
   {
-    label: `Contact sales`,
+    label: `Home`,
     href: `/`,
   },
   {
-    label: `Log in`,
-    href: `/`,
+    label: `About`,
+    href: `/about`,
   },
   {
-    label: `Get Started`,
-    href: `/`,
+    label: `Facilities`,
+    href: `/facilities`,
+  },
+  {
+    label: `Contact us`,
+    href: `/contact-us`,
   },
 ];
 
@@ -52,12 +37,12 @@ const MenuButton = ({ toggleMenu, showMenu }: IMenuButton) => (
     aria-controls="mobile-menu"
     aria-expanded={showMenu}
     onClick={toggleMenu}
-    className={tw(`p-2 text-gray-400`)}
+    className="p-2 text-gray-400"
   >
-    <span className={tw(`sr-only`)}>Open menu</span>
+    <span className="sr-only">Open menu</span>
     {showMenu ? (
       <svg
-        className={tw(`h-6 w-6`)}
+        className="h-6 w-6"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -70,7 +55,7 @@ const MenuButton = ({ toggleMenu, showMenu }: IMenuButton) => (
       </svg>
     ) : (
       <svg
-        className={tw(`h-6 w-6`)}
+        className="h-6 w-6"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -86,21 +71,21 @@ const MenuButton = ({ toggleMenu, showMenu }: IMenuButton) => (
 );
 
 const MobileMenu = () => (
-  <div className={tw(`md:hidden`)}>
-    <div className={tw(`px-2 pt-2 pb-3 space-y-1 sm:px-3`)}>
+  <div className="md:hidden">
+    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
       {links.map((link: Link) => (
-        <a href={link.href} className={tw(`text-gray-500 block px-3 py-2 text-base font-medium`)} key={link.label}>
+        <a href={link.href} className="text-gray-500 block px-3 py-2 text-base font-medium" key={link.label}>
           {link.label}
         </a>
       ))}
     </div>
-    <div className={tw(`pt-4 pb-3 border-t border-gray-400`)}>
-      <div className={tw(`px-2 space-y-1`)}>
+    <div className="pt-2 pb-2">
+      <div className="px-2 space-y-1">
         {secondaryLinks.map((link: Link) => (
           <a
             key={`mobile-${link.label}`}
             href={link.href}
-            className={tw(`block px-3 py-2 text-base font-medium text-gray-500`)}
+            className="block px-3 py-2 text-base font-medium text-gray-500"
           >
             {link.label}
           </a>
@@ -115,35 +100,33 @@ const Navigation = () => {
   const toggleMenu = () => setShowMenu(!showMenu);
 
   return (
-    <nav className={tw(`bg-white`)}>
-      <div className={tw(`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)}>
-        <div className={tw(`flex items-center justify-between h-24`)}>
-          <div className={tw(`flex items-center`)}>
-            <div className={tw(`flex-shrink-0`)}>
-              <img className={tw(`h-12 w-12`)} src="logo.svg" alt="logo" width={48} height={48} />
+    <nav className="bg-base shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 lg:px-0">
+        <div className="flex items-center justify-between py-2">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <img className="h-14 w-14" src="logo.svg" alt="logo" />
             </div>
-            <div className={tw(`hidden md:block`)}>
-              <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-4">
                 {links.map((link: Link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    className={tw(`text-gray-500 hover:text-gray-600 px-3 py-2 rounded-md font-medium`)}
-                  >
+                  <a key={link.label} href={link.href} className="text-white px-3 py-2 rounded-md font-medium">
                     {link.label}
                   </a>
                 ))}
               </div>
             </div>
           </div>
-          <div className={tw(`hidden md:block`)}>
-            <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <Button modifier="border-0 mr-2">Contact sales</Button>
-              <Button modifier="border-0 mr-2">Log in</Button>
-              <Button primary>Get started</Button>
+          <div className="hidden md:block">
+            <div className="ml-4 flex items-center md:ml-6">
+              {secondaryLinks.map((link: Link) => (
+                <a key={link.label} href={link.href} className="text-white px-3 py-2 rounded-md font-medium">
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
-          <div className={tw(`-mr-2 flex md:hidden`)}>
+          <div className="-mr-2 flex md:hidden">
             <MenuButton showMenu={showMenu} toggleMenu={toggleMenu} />
           </div>
         </div>

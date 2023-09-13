@@ -15,7 +15,7 @@ A free Next.js TypeScript landing page template for SaaS products, online servic
 
 - ⚡ **Next.js** — The React Framework
 - 🔥 **next-seo** — Manage SEO easily
-- 💡 **Twind** — The smallest, fastest, most feature complete Tailwind-in-JS solution in existence
+- 💡 **Tailwind** — The utitlity first CSS framework
 - 📏 **ESLint** — Pluggable JavaScript linter
 - 💖 **Prettier** — Opinionated Code Formatter
 - 🐶 **Husky** — Use git hooks with ease
@@ -35,7 +35,6 @@ Run the following commands inside the project folder:
 2. `yarn dev`
 
 To view the project open `http://localhost:3000`
-
 
 ## 🤝 Contributing
 
