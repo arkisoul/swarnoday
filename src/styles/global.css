@@ -1,19 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Quicksand&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans&display=swap');
-
-:root {
-  --base-color: #FF9F57;
-}
-body {
-  background-color: beige;
-}
 
 .embla {
   --slide-spacing: 0rem;
-  --slide-size: 100%;
-  --slide-height: 100vh;
   --background-site: rgb(249, 249, 249);
   --brand-primary: rgb(47, 112, 193);
   --brand-secondary: rgb(116, 97, 195);
