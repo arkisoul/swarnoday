@@ -116,7 +116,7 @@ const Navigation = () => {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="bg-yellow-300 text-slate-700 px-4 py-2 rounded-md font-medium"
+                    className="bg-yellow-300 text-slate-700 px-4 py-2 rounded-md font-sans font-medium"
                   >
                     {link.label}
                   </Link>
@@ -130,7 +130,7 @@ const Navigation = () => {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="bg-yellow-300 text-slate-700 px-4 py-2 rounded-md font-medium"
+                  className="bg-yellow-300 text-slate-700 px-4 py-2 rounded-md font-sans font-medium"
                 >
                   {link.label}
                 </Link>

@@ -15,7 +15,7 @@ const Affix: React.FC<IProps> = ({ links }) => (
     <menu className="m-0 p-0">
       {links.map((link: TLink) => (
         <li key={link.name}>
-          <Link className="block px-6 py-2 border-b" href={link.url}>
+          <Link className="block px-6 py-2 border-b font-sans" href={link.url}>
             {link.name}
           </Link>
         </li>
