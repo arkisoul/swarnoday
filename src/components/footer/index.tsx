@@ -1,6 +1,6 @@
 const Footer = () => (
-  <footer className="bg-base border-t border-gray-100 py-4">
-    <div className="max-w-7xl mx-auto text-white px-4 lg:px-0 flex flex-wrap justify-between">
+  <footer className="bg-slate-50 border-t border-gray-100 py-4">
+    <div className="max-w-7xl mx-auto text-slate-700 px-4 lg:px-0 flex flex-wrap justify-between">
       <p className="mb-0">
         Copyrights &copy;{` `}
         {new Date().getFullYear()}. All rights reserved.

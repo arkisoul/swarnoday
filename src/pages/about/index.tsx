@@ -9,9 +9,9 @@ export default function About() {
     <Page>
       <NextSeo title="Swarnoday Tirth" description="Swarnoday Tirth" />
       <Main>
-        <div className="flex max-w-7xl mx-auto">
+        <div className="bg-white flex max-w-7xl mx-auto">
           <div className="content flex-1" />
-          <div className="sidebar flex-[0_0_20%]">
+          <div className="sidebar flex-[0_0_20%] border-l border-r">
             <Affix links={AboutLinks} />
           </div>
         </div>

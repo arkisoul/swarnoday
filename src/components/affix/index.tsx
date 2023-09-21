@@ -1,22 +1,23 @@
 import React from 'react';
+import Link from 'next/link';
 
-type Link = {
+type TLink = {
   name: string;
   url: string;
 };
 
 type IProps = {
-  links: Link[];
+  links: TLink[];
 };
 
 const Affix: React.FC<IProps> = ({ links }) => (
   <div className="affix bg-white min-h-screen sticky top-px">
     <menu className="m-0 p-0">
-      {links.map((link: Link) => (
+      {links.map((link: TLink) => (
         <li key={link.name}>
-          <a className="block px-6 py-2 border-b" href={link.url}>
+          <Link className="block px-6 py-2 border-b" href={link.url}>
             {link.name}
-          </a>
+          </Link>
         </li>
       ))}
     </menu>

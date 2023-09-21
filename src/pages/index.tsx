@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo';
+import Link from 'next/link';
 import Page from '@/components/page';
 import Header from '@/components/header';
 import Main from '@/components/main';
@@ -7,12 +8,7 @@ import EmblaCarousel from '@/components/carousel';
 import Image from 'next/image';
 
 export default function Home() {
-  const slides: string[] = [
-    `/images/temple3.jpeg`,
-    `/images/temple1.jpg`,
-    `/images/temple2.jpg`,
-    `/images/museum.jpeg`,
-  ];
+  const slides: string[] = [`/images/ghantai.webp`, `/images/museum.webp`, `/images/shantinathji.webp`];
   return (
     <Page>
       <NextSeo title="Swarnoday Tirth" description="Swarnoday Tirth" />
@@ -26,16 +22,16 @@ export default function Home() {
                 similique sint nesciunt eius dolores est quos nemo fugit suscipit minus iusto dicta consequuntur laborum
                 consequatur.
               </p>
-              <a href="/about" className="bg-base inline-block px-4 py-2 text-white">
+              <Link href="/about" className="bg-base inline-block px-4 py-2 text-white rounded-md">
                 Know more
-              </a>
+              </Link>
             </div>
             <div className="flex-[0_0_45%]">
               <EmblaCarousel slides={slides} imgClassNamesOverride="h-full lg:h-80 object-fill" />
             </div>
           </div>
         </Section>
-        <Section classNames={[`bg-yellow-100`]} heading="Swarnoday Temple">
+        <Section classNames={[`bg-yellow-50`]} heading="Swarnoday Temple">
           <div className="flex max-w-7xl mx-auto gap-6 flex-col lg:flex-row">
             <div className="flex-[0_0_45%] relative">
               <Image
@@ -52,9 +48,9 @@ export default function Home() {
                 similique sint nesciunt eius dolores est quos nemo fugit suscipit minus iusto dicta consequuntur laborum
                 consequatur.
               </p>
-              <a href="/about/swarnoday" className="bg-base inline-block px-4 py-2 text-white">
+              <Link href="/about/swarnoday" className="bg-base inline-block px-4 py-2 text-white rounded-md">
                 Know more
-              </a>
+              </Link>
             </div>
           </div>
         </Section>

@@ -18,6 +18,7 @@
 
 .embla__dot {
   -webkit-appearance: none;
+  appearance: none;
   background-color: transparent;
   touch-action: manipulation;
   display: inline-flex;
@@ -29,7 +30,7 @@
 }
 .embla__dots {
   z-index: 99;
-  bottom: 1.6rem;
+  bottom: 10px;
   position: absolute;
   left: 0;
   right: 0;
@@ -38,12 +39,12 @@
   align-items: center;
 }
 .embla__dot {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
   align-items: center;
-  margin-right: 0.75rem;
-  margin-left: 0.75rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
 }
 .embla__dot:after {
   background: var(--background-site);
@@ -53,9 +54,5 @@
   content: '';
 }
 .embla__dot--selected:after {
-  background: linear-gradient(
-    45deg,
-    var(--brand-primary),
-    var(--brand-secondary)
-  );
+  background: linear-gradient(45deg, var(--brand-primary), var(--brand-secondary));
 }
