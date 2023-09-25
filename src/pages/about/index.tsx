@@ -6,7 +6,7 @@ export default function About() {
   return (
     <Page>
       <NextSeo title="Swarnoday Tirth" description="Swarnoday Tirth" />
-      <AboutLayout heading="Khajuraho Eastern group of Temples">
+      <AboutLayout heading="Eastern group of Temples - Khajuraho">
         <p>
           Deep in &quot;The heart of India&quot; (i.e.Madhya Pradesh), about 560 KM. away from Delhi by train and road,
           lie the great grand temples of Khajuraho, reputed for their art and architecture and generally admitted as the

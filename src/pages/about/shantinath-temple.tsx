@@ -25,6 +25,13 @@ export default function ShantinathTemple() {
           Samvat 1085 (1028 A.D.), although at present, it is normally invisible, much of it having been covered with
           plaster.
         </p>
+        <Image
+          src="/images/shantinath-idol.jpg"
+          alt="Shri Shantinathjib Idol"
+          width={100}
+          height={100}
+          className="w-2/4 h-auto rounded-md float-right ml-6 pb-2"
+        />
         <p>
           The devotee, when the enters the temple, straightway goes to this sanctum, pays his respects and prays before
           the deity. The temple contains, at present, seventeen vedikas (altars), of which three e.g. 1,11 and 14 are
@@ -36,13 +43,6 @@ export default function ShantinathTemple() {
           have been incorporated, which remind visitors of the glories, which once upon a time, these temples
           represented.
         </p>
-        <Image
-          src="/images/shantinath-idol.jpg"
-          alt="Shri Shantinathjib Idol"
-          width={100}
-          height={100}
-          className="w-2/4 h-auto rounded-md float-right ml-6"
-        />
         <p>
           In the main sanctum, in addition to the image of Lord Santinath (Vedika-1), there are many Tirthankar images
           of great importance. The parikara is exquistely carved with two statues of Lord Parsvanath in standing posture
