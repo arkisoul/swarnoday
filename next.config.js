@@ -1,4 +1,5 @@
 module.exports = {
+  basePath: process.env.NODE_ENV === 'development' ? '' : '/swarnoday',
   reactStrictMode: true,
   swcMinify: true,
   webpack(config) {
